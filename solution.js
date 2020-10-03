@@ -1,35 +1,11 @@
-// Dont touch this line
+// Dont modify
 const faker = require('faker')
 const crypto = require('crypto')
 const ValidityChecker = require('./ValidityChecker')
-// Dont touch this line
+// Dont modify
 
-class Blockchain extends ValidityChecker {
+class Blockchain {
   constructor() {
-    super()
-    this.chain = []
-  }
-
-  findTransaction(index) {
-    return this.chain[index]
-  }
-
-  addBlock(block) {
-    let index = this.chain.length
-    let prevHash = this.chain.length
-      ? this.chain[this.chain.length - 1].hash
-      : 0
-    let newBlock
-    if (this.checkValidTransaction(block)) {
-      newBlock = new Block(block, index, prevHash)
-      this.chain.push(newBlock)
-    } else {
-      throw new Error('Transaction is Invalid')
-    }
-    return newBlock
-  }
-
-  destroyChain() {
     this.chain = []
   }
 }
@@ -55,32 +31,9 @@ class Block {
     return hash
   }
 }
-
-let blockchain = new Blockchain()
-
-blockchain.addBlock({
-  sender: `${faker.name.firstName()} ${faker.name.lastName()}`,
-  recipient: `${faker.name.firstName()} ${faker.name.lastName()}`,
-  amount: faker.finance.amount()
-})
-blockchain.addBlock({
-  sender: `${faker.name.firstName()} ${faker.name.lastName()}`,
-  recipient: `${faker.name.firstName()} ${faker.name.lastName()}`,
-  amount: faker.finance.amount()
-})
-blockchain.addBlock({
-  sender: `${faker.name.firstName()} ${faker.name.lastName()}`,
-  recipient: `${faker.name.firstName()} ${faker.name.lastName()}`,
-  amount: faker.finance.amount()
-})
-
-console.log('BLOCKCHAIN VALIDITY', blockchain.checkChainValid(blockchain.chain))
-console.log(blockchain.chain[0])
-blockchain.chain[0].data.sender = 'Tester'
-console.log(blockchain.chain[0])
-console.log('BLOCKCHAIN VALIDITY', blockchain.checkChainValid(blockchain.chain))
-
+// Dont modify
 module.exports = {
   Blockchain,
   Block
 }
+// Dont modify

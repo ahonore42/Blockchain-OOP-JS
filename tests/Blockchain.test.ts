@@ -7,9 +7,9 @@ describe('Blockchain ', () => {
     amount?: Number
   }
   let index: number = 0
-  const bChain = new Blockchain()
+  const bChain: typeof Blockchain = new Blockchain()
   let param: block = { sender: 'Name', recipient: 'Name', amount: 32 }
-  let testBlock = new Block(param, 0, 0)
+  let testBlock: typeof Block = new Block(param, 0, 0)
 
   test('It should extend ValidityChecker => Can access checkChainValid', () => {
     expect(bChain.checkChainValid).toBeDefined()
@@ -38,7 +38,6 @@ describe('Blockchain ', () => {
   test('findTransaction should take a parameter called index and return that block', () => {
     expect(bChain.findTransaction(index)).toEqual(testBlock)
   })
-
   test('destroyBlock should wipe the chain', () => {
     expect(bChain.destroyChain).toBeDefined()
     bChain.destroyChain()
