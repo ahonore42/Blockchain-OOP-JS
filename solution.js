@@ -1,14 +1,21 @@
-// Dont modify
+// DO NOT MODIFY v
 const faker = require('faker')
 const crypto = require('crypto')
 const ValidityChecker = require('./ValidityChecker')
-// Dont modify
+// DO NOT MODIFY ^
 
+
+/////////////////////////////////////////////////////////
+// BLOCKCHAIN CLASS
+// Your code goes here
 class Blockchain {
   constructor() {
     this.chain = []
   }
 }
+
+/////////////////////////////////////////////////////////
+
 
 class Block {
   /**
@@ -31,9 +38,21 @@ class Block {
     return hash
   }
 }
-// Dont modify
+
+
+///////////////////////////////////////////////////
+// BLOCKCHAIN CLASS INSTANCES
+// Your code goes here
+
+
+
+
+///////////////////////////////////////////////////
+
+
+
+// DO NOT MODIFY v
 module.exports = {
   Blockchain,
   Block
 }
-// Dont modify
