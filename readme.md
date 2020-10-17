@@ -156,10 +156,10 @@ Now that you've added your first transaction, we need to ensure that every trans
 
 The `checkChainValid` method has been provided within the `ValidityChecker` class to allow you to do this.
 
-Console.log the result of the `validityChecker` on the instance of your new `Blockchain` class to your console to see if the chain is valid or not. Remember we should only access this method from our created instance of the `Blockchain` class, like so:
+Console.log the result of the `checkChainValid` on the instance of your new `Blockchain` class to your console to see if the chain is valid or not. Remember we should only access this method from our created instance of the `Blockchain` class, like so:
 
 ```js
-myNewBlockChain.validityChecker(someValueFromMyNewBlockChain)
+myNewBlockChain.checkChainValid(someValueFromMyNewBlockChain)
 ```
 
 
