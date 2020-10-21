@@ -242,7 +242,7 @@ If the test passes... We are now evil people :) .... JK
 
 ## Closing
 
-If all of your tests pass successfully, congrats **you just built your first blockchain**! Let's build the next Bitcoin!
+If all of your tests pass successfully, **you just built your first blockchain**! Let's build the next Bitcoin!
 
 ```
     ✓ It should extend ValidityChecker => Can access checkChainValid (2 ms)
